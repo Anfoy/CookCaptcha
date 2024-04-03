@@ -1,0 +1,6 @@
+name: CookCaptcha
+version: '${project.version}'
+main: me.afatcookie.cookcaptcha.CookCaptcha
+api-version: '1.20'
+authors: [AFatCookie]
+description: Captcha for your server!
