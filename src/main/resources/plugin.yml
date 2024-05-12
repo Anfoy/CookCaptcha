@@ -1,6 +1,13 @@
 name: CookCaptcha
 version: '${project.version}'
 main: me.afatcookie.cookcaptcha.CookCaptcha
-api-version: '1.20'
+api-version: '1.20.4'
 authors: [AFatCookie]
 description: Captcha for your server!
+commands:
+  CookCap:
+    description: default command for CookCaptcha
+    usage: /CookCap <command>
+    permission: cookcaptcha.admin
+    permission-message: Insufficient permission.
+

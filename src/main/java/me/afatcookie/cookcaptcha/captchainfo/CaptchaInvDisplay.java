@@ -36,7 +36,7 @@ public class CaptchaInvDisplay implements GUI {
             currentPattern.add(clickedItem.getType());
             player.playSound(player.getLocation(), Sound.ENTITY_VILLAGER_YES, 5,10);
             if (currentPattern.size() == correctPattern.size()) {
-               player.closeInventory();
+                player.closeInventory();
             } else {
                 updateInv(currentPattern.size());
             }
@@ -56,7 +56,7 @@ public class CaptchaInvDisplay implements GUI {
 
     @Override
     public Inventory getInventory() {
-         inv = new InventoryBuilder("&3Captcha", 36, this).build();
+        inv = new InventoryBuilder("&3Captcha", 36, this).build();
         contents = createRandomizedInventory(36);
         initiateCorrectPattern();
         updateInv(0);
@@ -85,6 +85,7 @@ public class CaptchaInvDisplay implements GUI {
         Collections.addAll(materialList, materials);
         materialList.remove(Material.AIR);
         materialList.removeIf(mat -> !mat.isItem());
+        materialList.removeIf(mat -> mat.toString().contains("EGG"));
         Collections.shuffle(materialList);
 
         ItemStack[] inventory = new ItemStack[size];
